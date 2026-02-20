@@ -2,9 +2,8 @@ package oop_00000110617_jesslynclarestasanders.week03
 
 class Weapon(
     val name: String,
-    damage: Int
 ) {
-    var damage: Int = damage
+    var damage: Int = 0
         set(value) {
             when {
                 value < 0 -> {
