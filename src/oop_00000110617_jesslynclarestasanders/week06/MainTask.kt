@@ -1,7 +1,6 @@
 package oop_00000110617_jesslynclarestasanders.week06
 
 fun main() {
-
     val hub = SmartHomeHub()
 
     val lamp = SmartLamp("L1", "Ruang Tamu")
@@ -12,4 +11,9 @@ fun main() {
     hub.addDevice(speaker)
     hub.addDevice(cctv)
 
+    println("\n=== Security Mode Aktif ===")
+    hub.activateSecurityMode()
+
+    println("\n=== Mematikan Semua Perangkat Switchable ===")
+    hub.turnOffAllSwitches()
 }
