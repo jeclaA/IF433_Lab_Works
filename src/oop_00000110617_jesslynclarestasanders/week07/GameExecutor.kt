@@ -6,8 +6,8 @@ fun processEvent(event: BattleState) {
             "[Monster muncul rGrggrH]: ${event.monsterName}! Bersiaplah;)!"
         }
         is BattleState.LootDropped -> {
-            val (name, _, rarity) = event.item
-            "Yayy kamu mendapatkan item: $name [Rarity: $rarity]"
+            val (name, damage, rarity) = event.item
+            "Yayy kamu mendapatkan item: $name [Rarity: $rarity, Damage: $damage] "
         }
         is BattleState.GameOver -> {
             "[OH No.. Game Over!] Alasan: ${event.reason}"
