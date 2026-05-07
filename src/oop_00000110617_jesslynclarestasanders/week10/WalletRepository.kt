@@ -4,7 +4,8 @@ interface HasName {
     val name: String
 }
 
-class WalletRepository<T: HasName> {
+class WalletRepository<T> {
+
     private val items = mutableListOf<T>()
 
     fun add(item: T) {
@@ -15,7 +16,9 @@ class WalletRepository<T: HasName> {
         return items
     }
 
-    fun findByName(name: String): T? {
-        return items.find { it.name == name }
+    fun findByName(name: String): List<T> {
+        return items.filter {
+            it is HasName && it.name == name
+        }
     }
 }
