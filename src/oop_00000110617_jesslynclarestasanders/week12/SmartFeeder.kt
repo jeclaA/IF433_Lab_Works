@@ -35,7 +35,6 @@ fun main() {
     } finally {
         println("Siklus pengecekan dispenser pagi selesai.")
     }
-
     runCatching {
         dispenseKibble(
             requestedGram = 30,
